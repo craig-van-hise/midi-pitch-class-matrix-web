@@ -1,0 +1,6 @@
+{
+  "name": "# MIDI Pitch Class Matrix",
+  "description": "A compact modular WebMIDI tool to dynamically map incoming MIDI notes via a 12x13 matrix, shift root keys, and visualize input signals in real-time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0066FF;
+  --color-bg: #FFFFFF;
+  --color-text: #111111;
+  --color-border: #E5E7EB;
+  --color-piano-white: #FFFFFF;
+  --color-piano-black: #9CA3AF;
+  --color-piano-mixed: #F3F4F6;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 32px);
+  grid-template-rows: repeat(13, 32px);
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.matrix-cell {
+  width: 32px;
+  height: 32px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.matrix-cell:hover {
+  opacity: 0.8;
+}
+
+.label-mono {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #D1D5DB;
+}
+
+.axis-title {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.y-axis-title {
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+.dropdown {
+  appearance: none;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+}
+.dropdown:focus {
+  border-color: var(--color-primary);
+}
+
+.monitor {
+  font-family: 'Courier New', monospace;
+  background: #f9fafb;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #111111;
+}
